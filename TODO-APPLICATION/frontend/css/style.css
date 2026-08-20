@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 15px;
+}
+
+.container p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn.secondary {
+    background: #16a34a;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.form-container p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.form-container a {
+    color: #2563eb;
+}
+
+nav {
+    background: #2563eb;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    background: white;
+    color: #2563eb;
+}
+
+.dashboard {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.dashboard h1 {
+    margin-bottom: 20px;
+}
+
+#todoForm {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.todo {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.todo h3 {
+    margin-bottom: 8px;
+}
+
+.todo p {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.todo small {
+    color: #777;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.todo-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.todo-buttons button:last-child {
+    background: #dc2626;
+}
+
+#message {
+    color: #dc2626;
+}
+
+@media (max-width: 600px) {
+
+    .todo {
+        flex-direction: column;
+    }
+
+    .todo-buttons {
+        width: 100%;
+    }
+
+    .todo-buttons button {
+        flex: 1;
+    }
+
+}

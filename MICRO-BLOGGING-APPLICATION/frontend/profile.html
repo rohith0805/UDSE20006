@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Profile - MicroBlog</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>MicroBlog</h2>
+
+        <div>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="profile-container">
+
+        <div class="profile-card">
+
+            <div class="avatar">
+                <span id="avatarLetter">
+                    U
+                </span>
+            </div>
+
+            <h1 id="profileName">
+                User
+            </h1>
+
+            <p id="profileUsername">
+                @username
+            </p>
+
+            <p id="profileBio">
+                No bio yet.
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong id="followers">
+                        0
+                    </strong>
+
+                    <span>
+                        Followers
+                    </span>
+                </div>
+
+                <div>
+                    <strong id="following">
+                        0
+                    </strong>
+
+                    <span>
+                        Following
+                    </span>
+                </div>
+
+            </div>
+
+            <button id="editProfileBtn">
+                Edit Profile
+            </button>
+
+        </div>
+
+
+        <div
+            id="editSection"
+            class="edit-profile"
+            style="display:none;"
+        >
+
+            <h2>Edit Profile</h2>
+
+            <input
+                type="text"
+                id="editName"
+                placeholder="Name"
+            >
+
+            <textarea
+                id="editBio"
+                placeholder="Bio"
+                maxlength="160">
+            </textarea>
+
+            <button id="saveProfileBtn">
+                Save
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

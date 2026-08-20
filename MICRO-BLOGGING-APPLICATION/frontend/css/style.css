@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: #1d4ed8;
+    color: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar button {
+    background: white;
+    color: #1d4ed8;
+}
+
+
+/* HERO */
+
+.hero {
+    max-width: 800px;
+    margin: 120px auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.btn.secondary {
+    background: #16a34a;
+}
+
+
+/* AUTH */
+
+.auth-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.auth-container input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.auth-container button {
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.auth-container p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#message {
+    color: red;
+}
+
+
+/* FEED */
+
+.feed-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.create-post {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.create-post h2 {
+    margin-bottom: 15px;
+}
+
+.create-post textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    resize: vertical;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-footer button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* POST */
+
+.post-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.05);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.post-header span {
+    color: #777;
+    margin-left: 5px;
+}
+
+.post-header small {
+    color: #999;
+}
+
+.post-content {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+
+/* COMMENTS */
+
+.comments {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.comments form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.comments input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comments button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.comment strong {
+    margin-right: 8px;
+}
+
+
+/* PROFILE */
+
+.profile-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.profile-card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.profile-card h1 {
+    margin-top: 15px;
+}
+
+.profile-card p {
+    color: #666;
+    margin-top: 8px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 25px 0;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stats span {
+    color: #777;
+}
+
+.profile-card button,
+.edit-profile button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* EDIT PROFILE */
+
+.edit-profile {
+    background: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.edit-profile input,
+.edit-profile textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.edit-profile textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .navbar div {
+        gap: 10px;
+    }
+
+    .post-header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .comments form {
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Todo Application</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>My Todo</h2>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </nav>
+
+    <main class="dashboard">
+
+        <h1>My Tasks</h1>
+
+        <form id="todoForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Task title"
+                required
+            >
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Description"
+            >
+
+            <select id="priority">
+
+                <option value="Low">
+                    Low
+                </option>
+
+                <option value="Medium" selected>
+                    Medium
+                </option>
+
+                <option value="High">
+                    High
+                </option>
+
+            </select>
+
+            <input
+                type="date"
+                id="dueDate"
+            >
+
+            <button type="submit">
+                Add Task
+            </button>
+
+        </form>
+
+        <div class="filters">
+
+            <select id="filter">
+
+                <option value="all">
+                    All Tasks
+                </option>
+
+                <option value="pending">
+                    Pending
+                </option>
+
+                <option value="completed">
+                    Completed
+                </option>
+
+            </select>
+
+        </div>
+
+        <div id="todoList"></div>
+
+    </main>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

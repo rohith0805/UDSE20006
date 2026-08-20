@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio website of Rohith Reddy - Computer Science and Business Systems student.">
+    <title>Rohith Reddy | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">Rohith<span>.</span></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero" id="home">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <p class="intro">Hello, I'm</p>
+
+                    <h1>Rohith Reddy</h1>
+
+                    <h2>Computer Science & Business Systems Student</h2>
+
+                    <p class="hero-description">
+                        I am a passionate computer science student interested in
+                        software development, web technologies, and building
+                        practical solutions to real-world problems.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn primary-btn">
+                            View Projects
+                        </a>
+
+                        <a href="assets/resume_for_infosys.pdf"
+                           class="btn secondary-btn"
+                           target="_blank">
+                            View Resume
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+
+                        <a href="https://leetcode.com/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            LeetCode
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-circle">
+                        <img src="images/rohith job (1).jpeg"
+                             alt="Rohith Reddy"
+                             onerror="this.style.display='none'; this.parentElement.classList.add('image-error');">
+                        <span class="image-placeholder">RR</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+
+                <div class="section-title">
+                    <p>Get To Know Me</p>
+                    <h2>About Me</h2>
+                </div>
+
+                <div class="about-content">
+
+                    <div class="about-text">
+                        <h3>Who I Am</h3>
+
+                        <p>
+                            I am a B.Tech student specializing in Computer Science
+                            and Business Systems. I enjoy learning programming,
+                            web development, databases, and software engineering.
+                        </p>
+
+                        <p>
+                            My goal is to develop reliable and user-friendly
+                            applications while continuously improving my
+                            problem-solving and technical skills.
+                        </p>
+
+                        <a href="assets/resume_for_infosys.pdf"
+                           class="btn primary-btn"
+                           target="_blank">
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <div class="about-cards">
+
+                        <div class="info-card">
+                            <span class="info-icon">💻</span>
+                            <h3>Development</h3>
+                            <p>Building responsive and practical applications.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="info-icon">🧠</span>
+                            <h3>Problem Solving</h3>
+                            <p>Improving logical thinking through coding practice.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="info-icon">🚀</span>
+                            <h3>Learning</h3>
+                            <p>Continuously learning modern technologies.</p>
+                        </div>
+
+                        <div class="info-card">
+                            <span class="info-icon">🤝</span>
+                            <h3>Teamwork</h3>
+                            <p>Interested in collaborative software projects.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+
+                <div class="section-title">
+                    <p>My Technical Abilities</p>
+                    <h2>Skills</h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <h3>Programming</h3>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span>Java</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span>SQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Web Development</h3>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span>HTML</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span>CSS</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span>JavaScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-card">
+                        <h3>Technologies</h3>
+
+                        <div class="technology-list">
+                            <span>React</span>
+                            <span>MySQL</span>
+                            <span>MongoDB</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>PHP</span>
+                            <span>Python Flask</span>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <div class="container">
+
+                <div class="section-title">
+                    <p>What I Have Built</p>
+                    <h2>Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <article class="project-card">
+
+                        <div class="project-number">01</div>
+
+                        <div class="project-content">
+                            <h3>Personal Portfolio Website</h3>
+
+                            <p>
+                                A responsive personal portfolio website designed
+                                to showcase my skills, education, projects,
+                                resume, and contact information.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                Contact Me →
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+
+                        <div class="project-number">02</div>
+
+                        <div class="project-content">
+                            <h3>Smart Travel Planner</h3>
+
+                            <p>
+                                A web application that helps users plan trips,
+                                organize destinations, and manage travel
+                                information in one place.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>Supabase</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                Contact Me →
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+
+                        <div class="project-number">03</div>
+
+                        <div class="project-content">
+                            <h3>Flood Alert System</h3>
+
+                            <p>
+                                A web-based flood alert application designed to
+                                provide alerts and assist users with route
+                                information during flood situations.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>API</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                Contact Me →
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card">
+
+                        <div class="project-number">04</div>
+
+                        <div class="project-content">
+                            <h3>Library Management System</h3>
+
+                            <p>
+                                A system for managing books, users, issue and
+                                return operations, and library records.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>MySQL</span>
+                                <span>SQL</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                Contact Me →
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section section-alt" id="education">
+            <div class="container">
+
+                <div class="section-title">
+                    <p>My Academic Journey</p>
+                    <h2>Education</h2>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2027</span>
+
+                            <h3>B.Tech - Computer Science and Business Systems</h3>
+
+                            <h4>Vignan University</h4>
+
+                            <p>
+                                Studying computer science, programming,
+                                databases, software development, and
+                                business-oriented technology concepts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-content">
+                            <span class="timeline-date">Higher Secondary Education</span>
+
+                            <h3>Intermediate Education</h3>
+
+                            <p>
+                                Completed higher secondary education with a
+                                focus on mathematics and science.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <p>Let's Connect</p>
+                    <h2>Contact Me</h2>
+                </div>
+
+                <div class="contact-content">
+
+                    <div class="contact-info">
+
+                        <h3>Get In Touch</h3>
+
+                        <p>
+                            I am open to internship opportunities, entry-level
+                            roles, projects, and professional connections.
+                        </p>
+
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:your-email@example.com">
+                                    your-email@example.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span>📱</span>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+910000000000">
+                                    +91 00000 00000
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span>📍</span>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Andhra Pradesh, India</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn primary-btn">
+                            Send Message
+                        </button>
+
+                        <p id="formMessage" class="form-message"></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <p>
+                © <span id="currentYear"></span> Rohith Reddy. All Rights Reserved.
+            </p>
+
+            <a href="#home">Back to Top ↑</a>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

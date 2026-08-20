@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Home - MicroBlog</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <h2>MicroBlog</h2>
+
+        <div>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="feed-container">
+
+        <section class="create-post">
+
+            <h2>What's happening?</h2>
+
+            <form id="postForm">
+
+                <textarea
+                    id="content"
+                    maxlength="280"
+                    placeholder="Write your post..."
+                    required>
+                </textarea>
+
+                <div class="post-footer">
+
+                    <span id="counter">
+                        0 / 280
+                    </span>
+
+                    <button type="submit">
+                        Post
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <section>
+
+            <h2>Your Feed</h2>
+
+            <div id="feed"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>
