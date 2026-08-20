@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Checkout - FoodExpress
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/order.css"
+    >
+
+</head>
+
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+
+    <main class="container">
+
+
+        <div class="checkout-card">
+
+            <h1>
+                Checkout
+            </h1>
+
+
+            <div
+                id="checkoutMessage"
+                class="message"
+            ></div>
+
+
+            <form
+                id="checkoutForm"
+            >
+
+
+                <label>
+                    Delivery Address
+                </label>
+
+                <textarea
+                    id="address"
+                    placeholder="Enter your complete delivery address"
+                    required
+                ></textarea>
+
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+
+                <div class="checkout-total">
+
+                    Total:
+
+                    ₹<span id="checkoutTotal">
+                        0
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Place Order
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <%- include("partials/footer") %>
+
+
+    <script
+        src="/js/order.js"
+    ></script>
+
+</body>
+
+</html>

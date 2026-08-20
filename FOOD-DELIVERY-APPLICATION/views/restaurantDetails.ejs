@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        <%= restaurant.name %>
+        - FoodExpress
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/restaurant.css"
+    >
+
+</head>
+
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+
+    <main class="container">
+
+
+        <div class="restaurant-header">
+
+            <h1>
+                <%= restaurant.name %>
+            </h1>
+
+            <p>
+                <%= restaurant.description %>
+            </p>
+
+            <p>
+                📍
+                <%= restaurant.location %>
+            </p>
+
+            <p>
+                ⭐
+                <%= restaurant.rating %>
+            </p>
+
+        </div>
+
+
+        <h2 class="menu-title">
+            Menu
+        </h2>
+
+
+        <% if (foods.length === 0) { %>
+
+            <div class="empty-state">
+
+                <h2>
+                    No food available
+                </h2>
+
+            </div>
+
+        <% } else { %>
+
+
+            <div class="food-grid">
+
+                <% foods.forEach(food => { %>
+
+
+                    <div class="food-card">
+
+                        <img
+                            src="<%= food.image %>"
+                            alt="<%= food.name %>"
+                        >
+
+
+                        <div class="food-info">
+
+                            <h3>
+                                <%= food.name %>
+                            </h3>
+
+                            <p>
+                                <%= food.description %>
+                            </p>
+
+                            <h4>
+                                ₹<%= food.price %>
+                            </h4>
+
+
+                            <% if (user) { %>
+
+                                <button
+                                    class="add-cart"
+                                    data-id="<%= food._id %>"
+                                    data-name="<%= food.name %>"
+                                    data-price="<%= food.price %>"
+                                >
+                                    🛒 Add to Cart
+                                </button>
+
+
+                            <% } else { %>
+
+
+                                <a
+                                    href="/auth/login"
+                                    class="login-to-order"
+                                >
+                                    🔐 Login to Order
+                                </a>
+
+
+                            <% } %>
+
+                        </div>
+
+                    </div>
+
+
+                <% }); %>
+
+            </div>
+
+
+        <% } %>
+
+
+    </main>
+
+
+    <%- include("partials/footer") %>
+
+
+    <script
+        src="/js/cart.js"
+    ></script>
+
+</body>
+
+</html>

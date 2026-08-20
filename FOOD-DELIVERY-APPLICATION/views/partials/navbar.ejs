@@ -1,0 +1,57 @@
+<nav class="navbar">
+
+    <div class="logo">
+        <a href="/">
+            FoodExpress
+        </a>
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/restaurants">
+            Restaurants
+        </a>
+
+
+        <% if (user) { %>
+
+            <a
+                href="/cart"
+                class="cart-link"
+            >
+                🛒 Cart
+            </a>
+
+            <a href="/orders">
+                My Orders
+            </a>
+
+            <span class="welcome">
+                Hi, <%= user.name %>
+            </span>
+
+            <a href="/auth/logout">
+                Logout
+            </a>
+
+
+        <% } else { %>
+
+            <a href="/auth/login">
+                Login
+            </a>
+
+            <a href="/auth/register">
+                Register
+            </a>
+
+        <% } %>
+
+    </div>
+
+</nav>

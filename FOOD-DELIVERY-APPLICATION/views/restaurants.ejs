@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Restaurants - FoodExpress
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/restaurant.css"
+    >
+
+</head>
+
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+
+    <main class="container">
+
+        <h1 class="page-title">
+            Restaurants
+        </h1>
+
+
+        <% if (restaurants.length === 0) { %>
+
+            <div class="empty-state">
+
+                <h2>
+                    No restaurants available
+                </h2>
+
+                <p>
+                    Please try again later.
+                </p>
+
+            </div>
+
+        <% } else { %>
+
+
+            <div class="restaurant-grid">
+
+                <% restaurants.forEach(
+                    restaurant => {
+                %>
+
+                    <div class="restaurant-card">
+
+                        <img
+                            src="<%= restaurant.image %>"
+                            alt="<%= restaurant.name %>"
+                        >
+
+
+                        <div class="restaurant-info">
+
+                            <h2>
+                                <%= restaurant.name %>
+                            </h2>
+
+                            <p>
+                                <%= restaurant.description %>
+                            </p>
+
+                            <p>
+                                📍
+                                <%= restaurant.location %>
+                            </p>
+
+                            <p class="rating">
+                                ⭐
+                                <%= restaurant.rating %>
+                            </p>
+
+
+                            <a
+                                href="/restaurants/<%= restaurant._id %>"
+                                class="btn"
+                            >
+                                View Menu
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                <% }); %>
+
+            </div>
+
+
+        <% } %>
+
+    </main>
+
+
+    <%- include("partials/footer") %>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+.restaurant-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                280px,
+                1fr
+            )
+        );
+
+    gap: 30px;
+}
+
+
+.restaurant-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px
+        rgba(
+            0,
+            0,
+            0,
+            0.1
+        );
+
+    transition: 0.3s;
+}
+
+
+.restaurant-card:hover {
+
+    transform:
+        translateY(-5px);
+}
+
+
+.restaurant-card img {
+
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.restaurant-info {
+
+    padding: 20px;
+}
+
+
+.restaurant-info h2 {
+
+    margin-bottom: 10px;
+}
+
+
+.restaurant-info p {
+
+    color: #555;
+
+    margin: 8px 0;
+}
+
+
+.rating {
+
+    font-weight: bold;
+
+    color: #e67e22 !important;
+}
+
+
+.restaurant-info .btn {
+
+    margin-top: 15px;
+}
+
+
+/* Restaurant details */
+
+.restaurant-header {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.restaurant-header h1 {
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+
+.menu-title {
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.food-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                260px,
+                1fr
+            )
+        );
+
+    gap: 25px;
+}
+
+
+.food-card {
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+.food-card img {
+
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: cover;
+}
+
+
+.food-info {
+
+    padding: 20px;
+}
+
+
+.food-info h3 {
+
+    margin-bottom: 10px;
+}
+
+
+.food-info p {
+
+    color: #666;
+
+    min-height: 45px;
+}
+
+
+.food-info h4 {
+
+    font-size: 20px;
+
+    margin: 15px 0;
+}
+
+
+.add-cart {
+
+    background: #ff5722;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.add-cart:hover {
+
+    background: #e64a19;
+}
+
+
+.login-to-order {
+
+    display: inline-block;
+
+    background: #ff5722;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 6px;
+
+    margin-top: 10px;
+}
+
+
+.empty-state {
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}

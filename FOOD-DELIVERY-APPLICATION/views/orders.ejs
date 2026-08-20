@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        My Orders - FoodExpress
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/order.css"
+    >
+
+</head>
+
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+
+    <main class="container">
+
+        <h1 class="page-title">
+            My Orders
+        </h1>
+
+
+        <% if (orders.length === 0) { %>
+
+
+            <div class="empty-state">
+
+                <h2>
+                    No orders yet
+                </h2>
+
+                <p>
+                    You haven't placed any orders.
+                </p>
+
+                <a
+                    href="/restaurants"
+                    class="btn"
+                >
+                    Order Food
+                </a>
+
+            </div>
+
+
+        <% } else { %>
+
+
+            <div class="orders-container">
+
+
+                <% orders.forEach(order => { %>
+
+
+                    <div class="order-card">
+
+                        <div class="order-header">
+
+                            <h2>
+                                Order #<%= order._id
+                                    .toString()
+                                    .slice(-6)
+                                    .toUpperCase()
+                                %>
+                            </h2>
+
+                            <span
+                                class="order-status"
+                            >
+                                <%= order.status %>
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Date:
+                            <%= new Date(
+                                order.createdAt
+                            ).toLocaleString() %>
+                        </p>
+
+
+                        <div class="order-items">
+
+                            <% order.items.forEach(
+                                item => {
+                            %>
+
+                                <div class="order-item">
+
+                                    <span>
+                                        <%= item.name %>
+                                        ×
+                                        <%= item.quantity %>
+                                    </span>
+
+                                    <strong>
+                                        ₹<%= item.price *
+                                            item.quantity %>
+                                    </strong>
+
+                                </div>
+
+                            <% }); %>
+
+                        </div>
+
+
+                        <div class="order-total">
+
+                            Total:
+
+                            ₹<%= order.totalAmount %>
+
+                        </div>
+
+
+                        <p>
+                            📍
+                            <%= order.address %>
+                        </p>
+
+                        <p>
+                            📞
+                            <%= order.phone %>
+                        </p>
+
+
+                    </div>
+
+
+                <% }); %>
+
+
+            </div>
+
+
+        <% } %>
+
+    </main>
+
+
+    <%- include("partials/footer") %>
+
+</body>
+
+</html>
