@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        <%= product.title %> - Classifieds
+    </title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+
+</head>
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+    <main class="details-page">
+
+        <div class="details-card">
+
+            <div>
+
+                <img
+                    src="<%= product.image %>"
+                    alt="<%= product.title %>"
+                    class="details-image"
+                    onerror="this.src='https://via.placeholder.com/600x400?text=No+Image'"
+                >
+
+            </div>
+
+            <div class="details-info">
+
+                <span class="category">
+                    <%= product.category %>
+                </span>
+
+                <h1>
+                    <%= product.title %>
+                </h1>
+
+                <h2 class="price">
+                    ₹<%= product.price.toLocaleString("en-IN") %>
+                </h2>
+
+                <p>
+                    📍 <strong>Location:</strong>
+                    <%= product.location %>
+                </p>
+
+                <hr>
+
+                <h3>Description</h3>
+
+                <p>
+                    <%= product.description %>
+                </p>
+
+                <hr>
+
+                <h3>Seller Information</h3>
+
+                <p>
+                    👤 <%= product.seller.name %>
+                </p>
+
+                <% if (user) { %>
+
+                    <p>
+                        📧 <%= product.seller.email %>
+                    </p>
+
+                    <a
+                        href="mailto:<%= product.seller.email %>"
+                        class="btn"
+                    >
+                        Contact Seller
+                    </a>
+
+                <% } else { %>
+
+                    <p>
+                        <a href="/login">
+                            Login
+                        </a>
+                        to contact the seller.
+                    </p>
+
+                <% } %>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>

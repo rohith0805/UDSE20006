@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>My Listings - Classifieds</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+    <main>
+
+        <section class="products-section">
+
+            <div class="section-header">
+
+                <h1>My Listings</h1>
+
+                <a href="/sell" class="btn">
+                    + Sell Product
+                </a>
+
+            </div>
+
+            <% if (products.length === 0) { %>
+
+                <div class="empty">
+
+                    <h2>
+                        You don't have any listings.
+                    </h2>
+
+                    <a href="/sell" class="btn">
+                        Sell Your First Product
+                    </a>
+
+                </div>
+
+            <% } %>
+
+            <div class="product-grid">
+
+                <% products.forEach(product => { %>
+
+                    <div class="product-card">
+
+                        <img
+                            src="<%= product.image %>"
+                            alt="<%= product.title %>"
+                            onerror="this.src='https://via.placeholder.com/400x250?text=No+Image'"
+                        >
+
+                        <div class="product-info">
+
+                            <h3>
+                                <%= product.title %>
+                            </h3>
+
+                            <p class="price">
+                                ₹<%= product.price.toLocaleString("en-IN") %>
+                            </p>
+
+                            <p>
+                                📍 <%= product.location %>
+                            </p>
+
+                            <a
+                                href="/product/<%= product._id %>"
+                                class="btn"
+                            >
+                                View
+                            </a>
+
+                            <form
+                                action="/product/delete/<%= product._id %>"
+                                method="POST"
+                                onsubmit="return confirm('Delete this listing?')"
+                                style="display:inline;"
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="delete-btn"
+                                >
+                                    Delete
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                <% }) %>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>

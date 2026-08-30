@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Classifieds - Buy & Sell</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+    <main>
+
+        <section class="hero">
+
+            <h1>Buy & Sell Used Products</h1>
+
+            <p>
+                Find great deals on used products near you.
+            </p>
+
+            <form action="/" method="GET" class="search-box">
+
+                <input
+                    type="text"
+                    name="search"
+                    placeholder="Search products..."
+                    value="<%= search %>"
+                >
+
+                <select name="category">
+
+                    <option value="">All Categories</option>
+
+                    <option value="Mobiles"
+                        <%= category === "Mobiles" ? "selected" : "" %>>
+                        Mobiles
+                    </option>
+
+                    <option value="Laptops"
+                        <%= category === "Laptops" ? "selected" : "" %>>
+                        Laptops
+                    </option>
+
+                    <option value="Electronics"
+                        <%= category === "Electronics" ? "selected" : "" %>>
+                        Electronics
+                    </option>
+
+                    <option value="Vehicles"
+                        <%= category === "Vehicles" ? "selected" : "" %>>
+                        Vehicles
+                    </option>
+
+                    <option value="Furniture"
+                        <%= category === "Furniture" ? "selected" : "" %>>
+                        Furniture
+                    </option>
+
+                    <option value="Books"
+                        <%= category === "Books" ? "selected" : "" %>>
+                        Books
+                    </option>
+
+                    <option value="Fashion"
+                        <%= category === "Fashion" ? "selected" : "" %>>
+                        Fashion
+                    </option>
+
+                    <option value="Other"
+                        <%= category === "Other" ? "selected" : "" %>>
+                        Other
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <% if (error) { %>
+
+            <div class="error">
+                <%= error %>
+            </div>
+
+        <% } %>
+
+
+        <section class="products-section">
+
+            <h2>Latest Products</h2>
+
+            <% if (products.length === 0) { %>
+
+                <div class="empty">
+                    <h3>No products found</h3>
+                    <p>Try another search.</p>
+                </div>
+
+            <% } %>
+
+
+            <div class="product-grid">
+
+                <% products.forEach(product => { %>
+
+                    <div class="product-card">
+
+                        <img
+                            src="<%= product.image %>"
+                            alt="<%= product.title %>"
+                            onerror="this.src='https://via.placeholder.com/400x250?text=No+Image'"
+                        >
+
+                        <div class="product-info">
+
+                            <h3>
+                                <%= product.title %>
+                            </h3>
+
+                            <p class="price">
+                                ₹<%= product.price.toLocaleString("en-IN") %>
+                            </p>
+
+                            <p>
+                                📍 <%= product.location %>
+                            </p>
+
+                            <p class="category">
+                                <%= product.category %>
+                            </p>
+
+                            <a
+                                href="/product/<%= product._id %>"
+                                class="btn"
+                            >
+                                View Details
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                <% }) %>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>

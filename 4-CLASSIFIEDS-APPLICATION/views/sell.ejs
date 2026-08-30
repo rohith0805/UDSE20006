@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Sell Product - Classifieds</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+
+</head>
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+    <main class="form-page">
+
+        <div class="form-card">
+
+            <h1>Sell Your Product</h1>
+
+            <p>
+                Create a listing for your used product.
+            </p>
+
+            <% if (error) { %>
+
+                <div class="error">
+                    <%= error %>
+                </div>
+
+            <% } %>
+
+            <form action="/sell" method="POST">
+
+                <label>Product Title *</label>
+
+                <input
+                    type="text"
+                    name="title"
+                    placeholder="Example: iPhone 13"
+                    required
+                >
+
+                <label>Description *</label>
+
+                <textarea
+                    name="description"
+                    placeholder="Describe your product..."
+                    required
+                ></textarea>
+
+                <label>Price *</label>
+
+                <input
+                    type="number"
+                    name="price"
+                    min="0"
+                    placeholder="Enter price"
+                    required
+                >
+
+                <label>Category *</label>
+
+                <select name="category" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Mobiles">
+                        Mobiles
+                    </option>
+
+                    <option value="Laptops">
+                        Laptops
+                    </option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                    <option value="Vehicles">
+                        Vehicles
+                    </option>
+
+                    <option value="Furniture">
+                        Furniture
+                    </option>
+
+                    <option value="Books">
+                        Books
+                    </option>
+
+                    <option value="Fashion">
+                        Fashion
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+                <label>Location *</label>
+
+                <input
+                    type="text"
+                    name="location"
+                    placeholder="Example: Guntur"
+                    required
+                >
+
+                <label>Image URL</label>
+
+                <input
+                    type="url"
+                    name="image"
+                    placeholder="https://example.com/image.jpg"
+                >
+
+                <button type="submit">
+                    Publish Listing
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <%- include("partials/footer") %>
+
+</body>
+</html>
