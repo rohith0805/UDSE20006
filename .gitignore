@@ -1,0 +1,16 @@
+# Node.js dependencies
+**/node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Build files
+**/dist/
+**/build/
+
+# Python files
+__pycache__/
+*.pyc
+.venv/
+venv/
